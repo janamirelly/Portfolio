@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-do List - Janayna Mirelly</title>
-  <link rel="stylesheet" href="todo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>To-do List</h1>
-    <div class="input-area">
-      <input type="text" id="taskInput" placeholder="Digite sua tarefa...">
-      <button onclick="addTask()">Adicionar</button>
-    </div>
-    <ul id="taskList"></ul>
-  </div>
+    <p>Lista de tarefas com salvamento no navegador</p>
+  </header>
+
+  <main>
+    <section id="task-list">
+      <h2>Minhas Tarefas</h2>
+      <input type="text" id="new-task" placeholder="Adicione uma nova tarefa">
+      <button id="add-task-btn">Adicionar Tarefa</button>
+      <ul id="tasks"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Janayna Mirelly • Portfólio</p>
+  </footer>
+
   <script src="todo.js"></script>
 </body>
 </html>
