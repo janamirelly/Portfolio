@@ -3,7 +3,8 @@ document.getElementById('form').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const peso = parseFloat(document.getElementById('peso').value);
-  const altura = parseFloat(document.getElementById('altura').value);
+  const alturaCm = parseFloat(document.getElementById('altura').value);
+  const altura = alturaCm / 100;
 
   const resultado = document.getElementById('resultado');
 
