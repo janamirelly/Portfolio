@@ -1,36 +1,24 @@
-const taskInput = document.getElementById('taskInput');
-const taskList = document.getElementById('taskList');
+alert("Boas vindas ao jogo do número secreto");
+let numeroSecreto = 8;
+console.log(numeroSecreto);
+let chute;
+let tentativas = 1;
 
-// Carregar tarefas salvas
-window.onload = () => {
-  const saved = localStorage.getItem('tasks');
-  if (saved) {
-    taskList.innerHTML = saved;
+// enquanto chute não for igual ao numeroSecreto
+while (chute != numeroSecreto) {
+  chute = prompt("Escolha um número entre 1 e 10");
+
+  // se chute for igual ao número secreto
+  if (chute == numeroSecreto) {
+    alert(
+      `Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`
+    );
+  } else {
+    if (chute > numeroSecreto) {
+      alert(`O número secreto é menor que ${chute}`);
+    } else {
+      alert(`O número secreto é maior que ${chute}`);
+    }
+    tentativas++;
   }
-};
-
-function addTask() {
-  if (taskInput.value.trim() === '') return;
-
-  const li = document.createElement('li');
-  const span = document.createElement('span');
-  span.textContent = taskInput.value;
-
-  const removeBtn = document.createElement('button');
-  removeBtn.textContent = 'Remover';
-  removeBtn.onclick = () => {
-    li.remove();
-    saveTasks();
-  };
-
-  li.appendChild(span);
-  li.appendChild(removeBtn);
-  taskList.appendChild(li);
-
-  taskInput.value = '';
-  saveTasks();
-}
-
-function saveTasks() {
-  localStorage.setItem('tasks', taskList.innerHTML);
 }
