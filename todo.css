@@ -1,75 +1,77 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f9;
 }
 
-.container {
-  max-width: 400px;
-  margin: 60px auto;
+header {
+  background-color: #4CAF50;
+  color: white;
   padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
   text-align: center;
-  color: #333;
 }
 
-.input-area {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+main {
+  padding: 20px;
 }
 
-input {
-  flex: 1;
+#task-list {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  width: 80%;
   padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  padding: 10px 15px;
-  background-color: #5c6bc0;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #3f51b5;
+  background-color: #45a049;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 20px;
 }
 
 li {
-  background: #eee;
-  margin-bottom: 10px;
   padding: 10px;
-  border-radius: 5px;
-  position: relative;
-}
-
-li.done {
-  text-decoration: line-through;
-  color: gray;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background: none;
+  background-color: #f44336;
   border: none;
-  color: red;
+  color: white;
   cursor: pointer;
+  border-radius: 4px;
 }
+
+li button:hover {
+  background-color: #e53935;
+}
+
+ 
