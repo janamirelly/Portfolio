@@ -1,58 +1,69 @@
+/* style.css */
 body {
   font-family: Arial, sans-serif;
-  background: #f0f8ff;
-  color: #333;
+  background: linear-gradient(to right, #f7f8fa, #dbeafe);
   margin: 0;
-  padding: 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  background: white;
-  padding: 2rem;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
   max-width: 400px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  color: #0066cc;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  display: block;
-  margin: 1rem 0 0.5rem;
+  margin-bottom: 5px;
+  color: #333;
 }
 
 input {
-  width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
+  font-size: 16px;
 }
 
 button {
-  margin-top: 1rem;
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #0066cc;
+  background-color: #2563eb;
   color: white;
+  padding: 12px;
   border: none;
   border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #0055aa;
+  background-color: #1e40af;
 }
 
-#resultado {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 1.1rem;
+.resultado {
+  margin-top: 20px;
   font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  color: #1f2937;
 }
 
  
