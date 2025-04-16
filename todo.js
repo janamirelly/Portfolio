@@ -1,61 +1,48 @@
-const taskInput = document.getElementById('taskInput');
-const taskList = document.getElementById('taskList');
+document.getElementById("add-task-btn").addEventListener("click", addTask);
 
 function addTask() {
+  const taskInput = document.getElementById("new-task");
   const taskText = taskInput.value.trim();
 
-  if (taskText === '') return;
+  if (taskText === "") {
+    alert("Por favor, adicione uma tarefa!");
+    return;
+  }
 
-  const li = document.createElement('li');
-  li.textContent = taskText;
+  const taskItem = document.createElement("li");
+  taskItem.innerHTML = `
+    ${taskText} 
+    <button onclick="removeTask(this)">Remover</button>
+  `;
 
-  li.addEventListener('click', () => {
-    li.classList.toggle('done');
-    saveTasks();
-  });
+  document.getElementById("tasks").appendChild(taskItem);
+  taskInput.value = "";
+  saveTasks();
+}
 
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = '✖';
-  deleteBtn.onclick = () => {
-    li.remove();
-    saveTasks();
-  };
-
-  li.appendChild(deleteBtn);
-  taskList.appendChild(li);
-  taskInput.value = '';
+function removeTask(button) {
+  button.parentElement.remove();
   saveTasks();
 }
 
 function saveTasks() {
-  const tasks = Array.from(taskList.children).map(li => ({
-    text: li.firstChild.textContent,
-    done: li.classList.contains('done')
-  }));
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  const tasks = [];
+  const taskItems = document.querySelectorAll("#tasks li");
+  taskItems.forEach(taskItem => {
+    tasks.push(taskItem.innerText.replace(" Remover", ""));
+  });
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function loadTasks() {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   tasks.forEach(task => {
-    const li = document.createElement('li');
-    li.textContent = task.text;
-    if (task.done) li.classList.add('done');
-
-    li.addEventListener('click', () => {
-      li.classList.toggle('done');
-      saveTasks();
-    });
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = '✖';
-    deleteBtn.onclick = () => {
-      li.remove();
-      saveTasks();
-    };
-
-    li.appendChild(deleteBtn);
-    taskList.appendChild(li);
+    const taskItem = document.createElement("li");
+    taskItem.innerHTML = `
+      ${task} 
+      <button onclick="removeTask(this)">Remover</button>
+    `;
+    document.getElementById("tasks").appendChild(taskItem);
   });
 }
 
