@@ -1,20 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  background-color: #f2f2f2;
   margin: 0;
+  padding: 0;
 }
 
-.todo-container {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 90%;
+.container {
   max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -22,30 +19,30 @@ h1 {
   color: #333;
 }
 
-.input-section {
+.input-area {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
-  margin-top: 20px;
 }
 
-#taskInput {
+input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 
 button {
   padding: 10px 15px;
-  background: #4CAF50;
+  background-color: #5c6bc0;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #45a049;
+  background-color: #3f51b5;
 }
 
 ul {
@@ -55,23 +52,24 @@ ul {
 }
 
 li {
-  padding: 10px;
   background: #eee;
-  border-radius: 6px;
   margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
 }
 
-li span {
-  flex: 1;
+li.done {
+  text-decoration: line-through;
+  color: gray;
 }
 
 li button {
-  background: red;
-  padding: 5px 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
   border: none;
-  border-radius: 6px;
-  color: white;
+  color: red;
   cursor: pointer;
 }
