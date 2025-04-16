@@ -1,36 +1,62 @@
 const taskInput = document.getElementById('taskInput');
 const taskList = document.getElementById('taskList');
 
-// Carregar tarefas salvas
-window.onload = () => {
-  const saved = localStorage.getItem('tasks');
-  if (saved) {
-    taskList.innerHTML = saved;
-  }
-};
-
 function addTask() {
-  if (taskInput.value.trim() === '') return;
+  const taskText = taskInput.value.trim();
+
+  if (taskText === '') return;
 
   const li = document.createElement('li');
-  const span = document.createElement('span');
-  span.textContent = taskInput.value;
+  li.textContent = taskText;
 
-  const removeBtn = document.createElement('button');
-  removeBtn.textContent = 'Remover';
-  removeBtn.onclick = () => {
+  li.addEventListener('click', () => {
+    li.classList.toggle('done');
+    saveTasks();
+  });
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = '✖';
+  deleteBtn.onclick = () => {
     li.remove();
     saveTasks();
   };
 
-  li.appendChild(span);
-  li.appendChild(removeBtn);
+  li.appendChild(deleteBtn);
   taskList.appendChild(li);
-
   taskInput.value = '';
   saveTasks();
 }
 
 function saveTasks() {
-  localStorage.setItem('tasks', taskList.innerHTML);
+  const tasks = Array.from(taskList.children).map(li => ({
+    text: li.firstChild.textContent,
+    done: li.classList.contains('done')
+  }));
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks.forEach(task => {
+    const li = document.createElement('li');
+    li.textContent = task.text;
+    if (task.done) li.classList.add('done');
+
+    li.addEventListener('click', () => {
+      li.classList.toggle('done');
+      saveTasks();
+    });
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = '✖';
+    deleteBtn.onclick = () => {
+      li.remove();
+      saveTasks();
+    };
+
+    li.appendChild(deleteBtn);
+    taskList.appendChild(li);
+  });
+}
+
+loadTasks();
