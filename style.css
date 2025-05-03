@@ -1,3 +1,7 @@
+@import url('imc.css');
+@import url('todo.css');
+
+
 * {
     margin: 0;
     padding: 0;
