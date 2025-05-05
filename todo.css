@@ -140,6 +140,39 @@ h2 {
     height: auto;
     margin-bottom: 16px;
 }
+@media only screen and (max-width: 414px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: auto;
+        height: auto;
+    }
+
+    .container__imagem-robo {
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .container__informacoes {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .container__botao {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
 
 }
 
