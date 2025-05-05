@@ -1,4 +1,4 @@
- {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,49 +7,55 @@
 
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
-
 
 body::before {
     background-image: url("img/code.png");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: contain;
     content: "";
-    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.4;
+    z-index: 0;
 }
 
 .container {
-    width: 1200px;
-    height: 600px;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     border-radius: 24px;
     border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
+    background-size: cover;
     position: relative;
+    z-index: 1;
 }
 
 .container__conteudo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    gap: 16px;
 }
 
 .container__informacoes {
-    flex: 1;
+    width: 100%;
     padding: 20px;
+    text-align: center;
 }
 
 .container__botao {
@@ -57,14 +63,15 @@ body::before {
     background: #1875E8;
     padding: 16px 24px;
     width: 100%;
-    font-size: 24px;
+    max-width: 300px;
+    font-size: 1.5rem;
     font-weight: 700;
     border: none;
     margin-top: 16px;
 }
 
 .container__texto {
-    margin: 16px 0 16px 0;
+    margin: 16px 0;
 }
 
 .container__texto-azul {
@@ -73,7 +80,7 @@ body::before {
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
+    font-size: 2.5rem;
 }
 
 h2,
@@ -83,6 +90,42 @@ button {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
+
+/* Responsivo para telas maiores */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        height: 600px;
+    }
+
+    .container__conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container__informacoes {
+        text-align: left;
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .container__botao {
+        font-size: 1.5rem;
+    }
+}
+
