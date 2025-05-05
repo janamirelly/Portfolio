@@ -98,7 +98,7 @@ h2 {
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
-        height: 600px;
+        min-height: 600px;
     }
 
     .container__conteudo {
@@ -128,9 +128,11 @@ h2 {
         font-size: 1.5rem;
     }
     .container__imagem-robo {
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
-    width: 200px;
+    width: 80%;
+    margin-bottom:16px;
+
 }
 
 .container__informacoes img {
