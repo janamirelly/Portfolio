@@ -46,15 +46,13 @@
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
+    gap: 20px;
+    
   }
   .project {
     background-color: white;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   .project h3 {
@@ -63,11 +61,11 @@
   .btn {
     display: inline-block;
     margin-top: 5px;
-    padding: 0.5rem 1rem;
+    padding: 10px 16px;
     background-color: #3b44f6;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.2s ease;
     border: 2px solid transparent;
