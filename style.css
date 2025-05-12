@@ -85,37 +85,42 @@
   .icones-contato {
   display: flex;
   justify-content: center;
-  gap: 30px; /* Aumentando o espaçamento entre os ícones */
+  gap: 25px; /* Ajustei o espaçamento para algo um pouco mais equilibrado */
   margin-top: 20px;
 }
 
 .icones-contato img {
   width: 30px; /* Ícones menores */
   height: 30px; /* Manter a proporção */
-  filter: invert(34%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(90%) contrast(100%); /* Cor azul */
+  filter: invert(34%) sepia(100%) saturate(150%) hue-rotate(210deg) brightness(90%) contrast(100%); /* Azul mais escuro */
   transition: transform 0.3s, filter 0.3s;
 }
 
 .icones-contato img:hover {
   transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-  filter: invert(34%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(110%) contrast(100%); /* Brilho ao passar o mouse */
+  filter: invert(34%) sepia(100%) saturate(150%) hue-rotate(210deg) brightness(120%) contrast(100%); /* Aumentando o brilho no hover */
 }
 
-
-  }
   .skills {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .skills li {
-    background-color: #eaeaea;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    color: #333;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
-  }
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar as linhas, se necessário */
+  justify-content: space-around; /* Alinha os itens de forma mais equilibrada */
+  gap: 15px; /* Espaçamento entre os itens */
+  margin-top: 20px;
+}
+
+.skills li {
+  background-color: #f0f0f0; /* Cor de fundo suave */
+  padding: 8px 15px; /* Ajustei o padding para dar mais espaçamento */
+  border-radius: 20px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte mais equilibrado */
+  font-weight: 500; /* Um pouco mais de ênfase no texto */
+  color: #333; /* Cor do texto */
+  transition: background-color 0.3s ease;
+}
+
+.skills li:hover {
+  background-color: #0066cc; /* Cor de fundo azul ao passar o mouse */
+  color: white; /* Cor do texto fica branca */
+}
+
