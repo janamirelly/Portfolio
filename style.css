@@ -85,21 +85,22 @@
   .icones-contato {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+  gap: 30px; /* Aumentando o espaçamento entre os ícones */
+  margin-top: 20px;
 }
 
 .icones-contato img {
-  width: 40px;
-  height: 40px;
-  filter: grayscale(100%);
+  width: 30px; /* Ícones menores */
+  height: 30px; /* Manter a proporção */
+  filter: invert(34%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(90%) contrast(100%); /* Cor azul */
   transition: transform 0.3s, filter 0.3s;
 }
 
 .icones-contato img:hover {
-  transform: scale(1.2);
-  filter: grayscale(0%);
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+  filter: invert(34%) sepia(100%) saturate(200%) hue-rotate(200deg) brightness(110%) contrast(100%); /* Brilho ao passar o mouse */
 }
+
 
   }
   .skills {
