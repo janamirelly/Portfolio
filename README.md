@@ -29,13 +29,21 @@ Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonada por desenvol
 - Página pessoal que reúne minhas informações profissionais e acadêmicas.
 - Criado com HTML e CSS para apresentação online.
 
+### 4. Sites Responsivos
+- Desenvolvimento de páginas responsivas utilizando **Bootstrap 5**, **Flexbox** e **CSS Grid**.
+- Projetos voltados para aprimorar técnicas de responsividade e boas práticas de layout.
+- Layouts adaptáveis a diferentes tamanhos de tela (desktop, tablet e mobile).
+
 ---
 
 ## Tecnologias Utilizadas
 
 - HTML5
 - CSS3
-- JavaScript 
+- JavaScript
+- Flexbox
+- CSS Grid
+- Bootstrap 5
 - Git e GitHub para versionamento
 
 ---
