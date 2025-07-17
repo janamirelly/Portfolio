@@ -1,126 +1,135 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-  }
-  header {
-    background: url('./imagens/tematica-de-fundo.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
-    position: relative;
-  }
-  header h1 {
-    font-size: 2rem;
-    margin-top: 5px 0;
-  }
-  header p {
-    margin: 0;
-    font-size: 1rem;
-  }
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid white;
-    margin-bottom: 10px;
-  }
-  section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  h2 {
-    margin-bottom: 20px;
-    color: #555;
-  }
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    
-  }
-  .project {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .project h3 {
-    margin-bottom: 10px;
-  }
-  .btn {
-    display: inline-block;
-    margin-top: 5px;
-    padding: 4px 10px;
-    font-size: 0.85rem;
-    background-color: #3b44f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid transparent;
-  }
-  .btn:hover {
-    background-color: #00d7ff;
-    transform: scale(1.05);
-    border-color: #6e29aa;
-  }
-  footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #f1f1f1;
-    font-size: 0.9rem;
-  }
-  .icones-contato {
-  display: flex;
-  justify-content: center;
-  gap: 25px; /* Ajustei o espaçamento para algo um pouco mais equilibrado */
-  margin-top: 20px;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.icones-contato img {
-  width: 30px; /* Ícones menores */
-  height: 30px; /* Manter a proporção */
-  filter: invert(34%) sepia(100%) saturate(150%) hue-rotate(210deg) brightness(90%) contrast(100%); /* Azul mais escuro */
-  transition: transform 0.3s, filter 0.3s;
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #005b96;
+  color: white;
 }
 
-.icones-contato img:hover {
-  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-  filter: invert(34%) sepia(100%) saturate(150%) hue-rotate(210deg) brightness(120%) contrast(100%); /* Aumentando o brilho no hover */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid white;
 }
 
-  .skills {
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar as linhas, se necessário */
-  justify-content: space-around; /* Alinha os itens de forma mais equilibrada */
-  gap: 15px; /* Espaçamento entre os itens */
-  margin-top: 20px;
+h1 {
+  font-size: 2.2em;
+  margin: 10px 0 5px;
+}
+
+header p {
+  font-weight: 300;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #005b96;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
 }
 
 .skills li {
-  background-color: #f0f0f0; /* Cor de fundo suave */
-  padding: 8px 15px; /* Ajustei o padding para dar mais espaçamento */
-  border-radius: 20px; /* Bordas arredondadas */
-  font-size: 16px; /* Tamanho da fonte mais equilibrado */
-  font-weight: 500; /* Um pouco mais de ênfase no texto */
-  color: #333; /* Cor do texto */
-  transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-.skills li:hover {
-  background-color: #0066cc; /* Cor de fundo azul ao passar o mouse */
-  color: white; /* Cor do texto fica branca */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
+
+.project {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.project h3 {
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #005b96;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #003f6b;
+}
+
+.icones-contato {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.icones-contato img {
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.icones-contato a:hover img {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
